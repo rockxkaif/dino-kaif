@@ -130,16 +130,6 @@ npm run dev
 
 ---
 
-Now it will render properly on GitHub:
-
-Big title
-Clean section hierarchy
-Professional spacing
-No cringe emojis
-
-If you want it even more “top-tier GitHub profile” style, I can level it up further.
-
-Copy everything below 👇
 
 Dino Ventures – Video Player Application
 <p align="center"> <strong>Mobile-First Video Platform with Smooth Playback & Gesture-Based UX</strong> </p> <p align="center"> <a href="https://dinovideo-kaif.netlify.app/"> <img src="https://img.shields.io/badge/Live%20Demo-View%20Project-4F46E5?style=for-the-badge&logo=vercel&logoColor=white" /> </a> </p>
@@ -185,12 +175,3 @@ http://localhost:5173
 * The mini-player persists playback while navigating between pages.
 
 ---
-
-That’s it.
-
-Clean.
-Professional.
-No random `"# dino-kaif"` line.
-Readable on GitHub.
-
-If you want, I can now give you a final full README block ready to paste in one shot.
