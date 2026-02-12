@@ -143,9 +143,6 @@ Copy everything below 👇
 
 Dino Ventures – Video Player Application
 <p align="center"> <strong>Mobile-First Video Platform with Smooth Playback & Gesture-Based UX</strong> </p> <p align="center"> <a href="https://dinovideo-kaif.netlify.app/"> <img src="https://img.shields.io/badge/Live%20Demo-View%20Project-4F46E5?style=for-the-badge&logo=vercel&logoColor=white" /> </a> </p>
-Overview
-Got it 👍 you want to keep your simple style, just improve the **Setup section** properly and remove that weird `"# dino-kaif"` at the bottom.
-
 
 ## Setup
 
