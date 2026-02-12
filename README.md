@@ -144,144 +144,56 @@ Copy everything below 👇
 Dino Ventures – Video Player Application
 <p align="center"> <strong>Mobile-First Video Platform with Smooth Playback & Gesture-Based UX</strong> </p> <p align="center"> <a href="https://dinovideo-kaif.netlify.app/"> <img src="https://img.shields.io/badge/Live%20Demo-View%20Project-4F46E5?style=for-the-badge&logo=vercel&logoColor=white" /> </a> </p>
 Overview
+Got it 👍 you want to keep your simple style, just improve the **Setup section** properly and remove that weird `"# dino-kaif"` at the bottom.
 
-This project is a production-style implementation of a modern mobile-first video player experience, built for the Dino Ventures Frontend Engineer assignment.
 
-The goal was not only to meet the functional requirements, but to deliver:
+## Setup
 
-Smooth interaction performance
+### Clone the repository
 
-Clean and consistent UI
+```bash
+git clone https://github.com/rockxkaif/dino-kaif.git
+```
 
-Gesture-driven UX
+### Navigate into the project
 
-Persistent player state
+```bash
+cd dino-kaif
+```
 
-Scalable component architecture
+### Install dependencies
 
-Live Application:
-https://dinovideo-kaif.netlify.app/
-
-What Makes This Implementation Strong
-
-✔ State-driven player architecture
-✔ Persistent mini-player across routes
-✔ Smooth 60fps transitions using transform-based animations
-✔ Category-aware related video switching
-✔ Clean separation of UI and playback logic
-✔ Mobile-first responsive layout
-
-Feature Breakdown
-Home Feed
-
-Category-grouped video sections
-
-Responsive grid layout
-
-Card hover micro-interactions
-
-Smooth navigation into player view
-
-Full Page Player
-
-Autoplay on open
-
-Custom controls (Play/Pause, Seek, ±10s)
-
-Time tracking display
-
-Fluid transition from feed → player
-
-In-Player Related List
-
-Filtered by active category
-
-Instant playback switching
-
-No page reloads
-
-Smooth animated reveal
-
-Drag-to-Minimize Experience
-
-Gesture-based drag down interaction
-
-Docked mini-player
-
-Persistent playback across navigation
-
-Restore to full screen on tap
-
-Close control
-
-Auto Play Next
-
-2-second countdown
-
-Cancel option
-
-Category-aware sequencing
-
-Architecture
-src/
- ├── components/     Reusable UI elements
- ├── context/        Global player state
- ├── data/           Dataset mapping
- ├── pages/          Route-level screens
- └── styles/         Tailwind + global styles
-
-State Management
-
-Global player state is handled via Context API:
-
-Active video
-
-Playback state
-
-Mini-player state
-
-Category filtering logic
-
-This ensures:
-
-No unnecessary remounts
-
-Persistent playback
-
-Clean state transitions
-
-Tech Stack
-
-React
-
-TypeScript
-
-Vite
-
-Tailwind CSS
-
-React Router
-
-Context API
-
-Performance Strategy
-
-Used CSS transforms instead of layout-shifting animations
-
-Avoided unnecessary re-renders
-
-Optimized transition timing (200–300ms)
-
-Maintained consistent render tree during minimize/restore
-
-Lightweight state updates
-
-Running Locally
+```bash
 npm install
+```
+
+### Start the development server
+
+```bash
 npm run dev
+```
 
-Final Notes
+The app will run at:
 
-This implementation focuses on delivering a smooth, production-ready frontend experience aligned with modern mobile standards.
+```
+http://localhost:5173
+```
 
-The emphasis was placed on interaction quality, architectural clarity, and UI consistency — not just feature completion.
+---
+
+## Notes
+
+* The dataset is stored in `src/data/videos.ts`, based on the provided assignment structure.
+* Player playback uses MP4 sources (required for custom controls) while retaining the original YouTube embed URLs as reference.
+* The mini-player persists playback while navigating between pages.
+
+---
+
+That’s it.
+
+Clean.
+Professional.
+No random `"# dino-kaif"` line.
+Readable on GitHub.
+
+If you want, I can now give you a final full README block ready to paste in one shot.
