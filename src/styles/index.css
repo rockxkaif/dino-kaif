@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Premium Light Background Gradient */
+@layer base {
+  body {
+    background: linear-gradient(180deg, #F8FAFF 0%, #EEF2FF 100%);
+    min-height: 100vh;
+  }
+}
+
 /* Light Theme Scrollbar */
 * {
   scrollbar-width: thin;
@@ -14,17 +22,17 @@
 }
 
 *::-webkit-scrollbar-track {
-  background: #f9fafb;
+  background: #F0F0FE;
 }
 
 *::-webkit-scrollbar-thumb {
-  background: #d1d5db;
+  background: #C7C7FD;
   border-radius: 9999px;
-  border: 2px solid #f9fafb;
+  border: 2px solid #F0F0FE;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background: #9ca3af;
+  background: #A8A8FC;
 }
 
 /* Premium Text Utilities */
@@ -126,18 +134,38 @@
 /* Smooth Interactive Elements */
 @layer components {
   .btn-premium {
-    @apply relative inline-flex items-center justify-center font-medium transition-all duration-200 ease-out;
+    @apply relative inline-flex items-center justify-center font-medium transition-all duration-300 ease-out;
   }
 
   .btn-premium:hover {
-    @apply transform -translate-y-0.5;
+    @apply transform -translate-y-0.5 shadow-premium-lg;
+  }
+
+  .btn-premium:active {
+    @apply transform translate-y-0;
   }
 
   .card-premium {
-    @apply rounded-xl border border-slate-200 bg-white shadow-premium-md transition-all duration-300 ease-out;
+    @apply rounded-xl bg-white shadow-premium-md transition-all duration-300 ease-out border border-brand-100/40;
   }
 
   .card-premium:hover {
-    @apply shadow-premium-lg;
+    @apply shadow-premium-lg border-brand-200/60 transform -translate-y-1;
+  }
+
+  .card-interactive {
+    @apply transition-all duration-300 ease-out cursor-pointer;
+  }
+
+  .card-interactive:hover {
+    @apply transform -translate-y-2;
+  }
+
+  .badge-premium {
+    @apply px-3 py-1.5 rounded-lg text-xs font-semibold uppercase tracking-wide transition-all duration-200;
+  }
+
+  .badge-premium:hover {
+    @apply shadow-premium-sm;
   }
 }

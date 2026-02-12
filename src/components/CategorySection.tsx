@@ -6,7 +6,7 @@ const CategorySection = ({ category }: { category: Category }) => (
   <motion.section
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.4, ease: 'easeOut' }}
+    transition={{ duration: 0.5, ease: 'easeOut' }}
     viewport={{ once: true, margin: '-100px' }}
     className="space-y-5"
   >
@@ -15,13 +15,13 @@ const CategorySection = ({ category }: { category: Category }) => (
       <motion.img
         src={category.iconUrl}
         alt=""
-        className="h-12 w-12 rounded-full border-2 border-brand-100 object-cover"
-        whileHover={{ scale: 1.05 }}
-        transition={{ type: 'spring', stiffness: 400 }}
+        className="h-12 w-12 rounded-full border-2 border-brand-200 object-cover shadow-premium-md transition-all duration-300 hover:shadow-premium-lg"
+        whileHover={{ scale: 1.08 }}
+        transition={{ type: 'spring', stiffness: 500 }}
       />
       <div>
-        <h2 className="text-xl font-bold text-light-primary">{category.name}</h2>
-        <p className="text-sm text-light-tertiary">{category.videos.length} videos</p>
+        <h2 className="text-xl font-bold text-slate-900">{category.name}</h2>
+        <p className="text-sm text-slate-500">{category.videos.length} videos</p>
       </div>
     </div>
 
@@ -36,8 +36,8 @@ const CategorySection = ({ category }: { category: Category }) => (
         show: {
           opacity: 1,
           transition: {
-            staggerChildren: 0.08,
-            delayChildren: 0.1,
+            staggerChildren: 0.1,
+            delayChildren: 0.15,
           },
         },
       }}
@@ -46,8 +46,8 @@ const CategorySection = ({ category }: { category: Category }) => (
         <motion.div
           key={video.id}
           variants={{
-            hidden: { opacity: 0, y: 20 },
-            show: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+            hidden: { opacity: 0, y: 24 },
+            show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
           }}
         >
           <VideoCard video={video} />

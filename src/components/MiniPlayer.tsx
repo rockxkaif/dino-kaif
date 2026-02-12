@@ -8,16 +8,16 @@ const MiniPlayer = () => {
 
   return (
     <motion.div
-      className="fixed bottom-20 right-4 z-40 w-[min(360px,90vw)] overflow-hidden rounded-xl border border-slate-200/60 bg-white shadow-premium-xl md:bottom-6"
+      className="fixed bottom-20 right-4 z-40 w-[min(360px,90vw)] overflow-hidden rounded-xl border border-brand-200/40 bg-white shadow-premium-xl md:bottom-6"
       layoutId="mini-player"
-      initial={{ opacity: 0, scale: 0.8, y: 40 }}
+      initial={{ opacity: 0, scale: 0.75, y: 60 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
-      exit={{ opacity: 0, scale: 0.8, y: 40 }}
+      exit={{ opacity: 0, scale: 0.75, y: 60 }}
       transition={{
         type: 'spring',
-        damping: 25,
+        damping: 20,
         stiffness: 400,
-        duration: 0.35,
+        duration: 0.4,
       }}
     >
       <div className="flex flex-col">
@@ -39,14 +39,14 @@ const MiniPlayer = () => {
           />
           {/* Expand Overlay */}
           <motion.div
-            className="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors group-hover:bg-black/40"
+            className="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/50"
             initial={{ opacity: 0 }}
             whileHover={{ opacity: 1 }}
           >
             <motion.span
-              className="text-3xl text-white"
+              className="text-3xl text-white text-opacity-0 group-hover:text-opacity-100 transition-all duration-300"
               initial={{ scale: 0.8 }}
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.15 }}
             >
               ⛶
             </motion.span>
@@ -54,20 +54,20 @@ const MiniPlayer = () => {
         </motion.button>
 
         {/* Mini Player Info - Light Theme */}
-        <div className="flex items-center justify-between gap-3 border-t border-slate-200/40 bg-gradient-to-br from-white to-slate-50 p-4">
+        <div className="flex items-center justify-between gap-3 border-t border-brand-100/30 bg-gradient-to-br from-white to-brand-25 p-4">
           <div className="flex-1 min-w-0">
-            <p className="text-xs font-semibold text-light-primary truncate">
+            <p className="text-xs font-semibold text-slate-900 truncate">
               {activeVideo.title}
             </p>
-            <p className="text-xs text-light-tertiary truncate">{activeVideo.category}</p>
+            <p className="text-xs text-slate-500 truncate">{activeVideo.category}</p>
           </div>
           {/* Close Button */}
           <motion.button
             type="button"
             onClick={closePlayer}
-            className="flex-shrink-0 rounded-lg border border-slate-300/60 bg-slate-50/80 px-2.5 py-1.5 text-xs font-semibold text-light-secondary hover:bg-slate-100 hover:text-light-primary hover:border-slate-400/60 transition-all duration-200"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            className="flex-shrink-0 rounded-lg border border-brand-200/50 bg-brand-50 px-2.5 py-1.5 text-xs font-semibold text-brand-600 hover:bg-brand-100 hover:text-brand-700 hover:border-brand-300/60 transition-all duration-300 active:scale-95"
+            whileHover={{ scale: 1.08 }}
+            whileTap={{ scale: 0.92 }}
           >
             ✕
           </motion.button>

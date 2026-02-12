@@ -116,16 +116,16 @@ const PlayerPage = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="rounded-xl border border-slate-200/60 bg-white shadow-premium-md p-12 text-center"
+          className="rounded-xl border border-brand-200/40 bg-white shadow-premium-md p-12 text-center"
         >
-          <h2 className="text-2xl font-bold text-light-primary">🎬 Video Not Found</h2>
-          <p className="mt-3 text-sm text-light-secondary">The video you are looking for does not exist. Return to home to explore more videos.</p>
+          <h2 className="text-2xl font-bold text-slate-900">🎬 Video Not Found</h2>
+          <p className="mt-3 text-sm text-slate-600">The video you are looking for does not exist. Return to home to explore more videos.</p>
           <motion.button
             type="button"
             onClick={() => window.location.href = '/'}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="mt-6 rounded-lg bg-gradient-to-r from-brand-600 to-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-premium-md transition"
+            className="mt-6 rounded-lg bg-gradient-to-r from-brand-600 to-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-premium-md transition-all duration-300 hover:shadow-premium-lg active:scale-95"
           >
             Back to Home
           </motion.button>
@@ -137,10 +137,10 @@ const PlayerPage = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="rounded-xl border border-slate-200/60 bg-white shadow-premium-md p-8 text-center"
+        className="rounded-xl border border-brand-200/40 bg-white shadow-premium-md p-8 text-center"
       >
         <motion.p
-          className="text-sm text-light-primary font-medium"
+          className="text-sm text-slate-900 font-medium"
           animate={{ opacity: [0.6, 1, 0.6] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
@@ -216,18 +216,18 @@ const PlayerPage = () => {
               <motion.div
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="flex items-center justify-between border border-slate-200/60 bg-white/90 backdrop-blur-sm rounded-t-xl px-5 py-4 shadow-premium-sm"
+                className="flex items-center justify-between border border-brand-200/40 bg-white/95 backdrop-blur-md rounded-t-xl px-5 py-4 shadow-premium-sm"
               >
                 <div>
                   <p className="text-xs font-bold uppercase tracking-widest text-brand-600">Now Playing</p>
-                  <h2 className="text-base font-bold text-light-primary mt-1 line-clamp-1">{activeVideo.title}</h2>
+                  <h2 className="text-base font-bold text-slate-900 mt-1 line-clamp-1">{activeVideo.title}</h2>
                 </div>
                 <motion.button
                   type="button"
                   onClick={() => setPlayerMode('mini')}
                   whileHover={{ scale: 1.08 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="rounded-lg border border-slate-300/60 bg-slate-50/70 px-4 py-2 text-xs font-semibold text-light-secondary hover:bg-slate-100 hover:text-light-primary transition-all flex-shrink-0 ml-3"
+                  whileTap={{ scale: 0.92 }}
+                  className="rounded-lg border border-brand-200/60 bg-brand-50 px-4 py-2 text-xs font-semibold text-brand-600 hover:bg-brand-100 hover:text-brand-700 transition-all duration-300 flex-shrink-0 ml-3 active:scale-95"
                 >
                   Minimize
                 </motion.button>
@@ -236,7 +236,7 @@ const PlayerPage = () => {
               {/* Player Container - INSIDE drag container */}
               <motion.div
                 ref={playerContainerRef}
-                className="overflow-hidden rounded-b-xl border-l border-r border-b border-slate-200/60 bg-black/90 shadow-premium-lg"
+                className="overflow-hidden rounded-b-xl border-l border-r border-b border-brand-200/30 bg-black/90 shadow-premium-lg"
                 onPointerDown={handlePointerDown}
                 onPointerMove={handlePointerMove}
                 onPointerUp={handlePointerUp}

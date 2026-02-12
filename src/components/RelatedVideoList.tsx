@@ -7,7 +7,7 @@ const RelatedVideoList = ({ videos, activeId }: { videos: Video[]; activeId: str
 
   return (
     <div className="space-y-4">
-      <h3 className="text-sm font-bold text-light-primary uppercase tracking-wide">Up next in this category</h3>
+      <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wide">Up next in this category</h3>
       <div className="space-y-3">
         {videos.map((video, index) => (
           <motion.button
@@ -17,26 +17,26 @@ const RelatedVideoList = ({ videos, activeId }: { videos: Video[]; activeId: str
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: index * 0.04, duration: 0.3 }}
-            whileHover={{ x: 4, backgroundColor: 'rgba(249, 250, 251, 1)' }}
-            whileTap={{ scale: 0.98 }}
-            className={`w-full flex items-center gap-3 overflow-hidden rounded-lg border px-3 py-3 text-left transition-all duration-200 ${
+            whileHover={{ x: 4 }}
+            whileTap={{ scale: 0.97 }}
+            className={`w-full flex items-center gap-3 overflow-hidden rounded-lg border px-3 py-3 text-left transition-all duration-300 ${
               video.id === activeId
-                ? 'border-brand-300/60 bg-brand-50 shadow-premium-sm'
-                : 'border-slate-200/60 bg-white hover:border-brand-300/40 hover:shadow-premium-sm'
+                ? 'border-brand-300/60 bg-brand-50 shadow-premium-sm hover:shadow-premium-md'
+                : 'border-brand-100/40 bg-white hover:border-brand-200/60 hover:shadow-premium-sm'
             }`}
           >
             <img 
               src={video.thumbnailUrl} 
               alt={video.title} 
-              className="h-14 w-24 rounded-md object-cover flex-shrink-0" 
+              className="h-14 w-24 rounded-md object-cover flex-shrink-0 transition-transform duration-300 hover:scale-105" 
             />
             <div className="flex flex-1 flex-col gap-1 min-w-0">
               <p className={`text-xs font-semibold line-clamp-2 ${
                 video.id === activeId
                   ? 'text-brand-700'
-                  : 'text-light-primary'
+                  : 'text-slate-900'
               }`}>{video.title}</p>
-              <span className="text-xs text-light-tertiary">{video.duration || 'YouTube'}</span>
+              <span className="text-xs text-slate-500">{video.duration || 'YouTube'}</span>
             </div>
             {video.id === activeId && (
               <motion.span 

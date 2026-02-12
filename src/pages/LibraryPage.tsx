@@ -10,8 +10,8 @@ const LibraryPage = () => (
       className="space-y-3"
     >
       <p className="text-xs font-bold uppercase tracking-widest text-brand-600">❤️ Library</p>
-      <h2 className="text-3xl font-bold text-light-primary">Recently Added</h2>
-      <p className="text-base text-light-secondary">
+      <h2 className="text-3xl font-bold text-slate-900">Recently Added</h2>
+      <p className="text-base text-slate-600">
         Discover the latest tutorials and demos across all categories.
       </p>
     </motion.header>

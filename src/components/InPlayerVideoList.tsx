@@ -21,20 +21,20 @@ const InPlayerVideoList = ({
   };
 
   return (
-    <div className="rounded-lg border border-slate-200/60 bg-white shadow-premium-md p-4">
+    <div className="rounded-lg border border-brand-200/40 bg-white shadow-premium-md p-4">
       <motion.button
         type="button"
         onClick={() => onToggle(!isOpen)}
-        className="flex w-full items-center justify-between gap-4 rounded-lg border border-slate-200/60 bg-slate-50/70 px-4 py-3 text-left transition-colors hover:bg-slate-100/80"
+        className="flex w-full items-center justify-between gap-4 rounded-lg border border-brand-200/50 bg-brand-50 px-4 py-3 text-left transition-all duration-300 hover:bg-brand-75 hover:shadow-premium-sm active:scale-98"
       >
         <div>
           <p className="text-xs font-bold uppercase tracking-widest text-brand-600">In-Player Videos</p>
-          <p className="text-sm font-semibold text-light-primary mt-0.5">
+          <p className="text-sm font-semibold text-slate-900 mt-0.5">
             {isOpen ? 'Hide list' : 'Tap to see related'}
           </p>
         </div>
         <motion.span
-          className="text-lg text-brand-500"
+          className="text-lg text-brand-600"
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.35, type: 'spring', stiffness: 400 }}
         >
@@ -54,7 +54,7 @@ const InPlayerVideoList = ({
             <div className="mt-4 max-h-[55vh] space-y-3 overflow-y-auto pr-2">
               {videos.length === 0 ? (
                 <div className="py-8 text-center">
-                  <p className="text-sm text-light-tertiary">No related videos</p>
+                  <p className="text-sm text-slate-500">No related videos</p>
                 </div>
               ) : (
                 videos.map((video, index) => (
@@ -65,24 +65,24 @@ const InPlayerVideoList = ({
                     initial={{ opacity: 0, x: -15 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.04 }}
-                    className={`flex w-full items-center gap-3 overflow-hidden rounded-lg border px-3 py-3 transition-all duration-200 ${
+                    className={`flex w-full items-center gap-3 overflow-hidden rounded-lg border px-3 py-3 transition-all duration-300 ${
                       video.id === activeId
-                        ? 'border-brand-300/60 bg-brand-50 shadow-premium-sm'
-                        : 'border-slate-200/60 bg-white hover:border-brand-300/40 hover:shadow-premium-sm'
+                        ? 'border-brand-300/60 bg-brand-50 shadow-premium-sm hover:shadow-premium-md'
+                        : 'border-brand-100/40 bg-white hover:border-brand-200/60 hover:shadow-premium-sm'
                     }`}
                   >
                     <img
                       src={video.thumbnailUrl}
                       alt={video.title}
-                      className="h-14 w-24 rounded-md object-cover flex-shrink-0"
+                      className="h-14 w-24 rounded-md object-cover flex-shrink-0 transition-transform duration-300 hover:scale-105"
                     />
                     <div className="flex flex-1 flex-col gap-1 min-w-0 text-left">
                       <p className={`text-xs font-semibold line-clamp-2 ${
                         video.id === activeId
                           ? 'text-brand-700'
-                          : 'text-light-primary'
+                          : 'text-slate-900'
                       }`}>{video.title}</p>
-                      <span className="text-xs text-light-tertiary">{video.duration || 'YouTube'}</span>
+                      <span className="text-xs text-slate-500">{video.duration || 'YouTube'}</span>
                     </div>
                     {video.id === activeId && (
                       <motion.span

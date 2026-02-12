@@ -5,29 +5,29 @@ export default {
     extend: {
       colors: {
         brand: {
-          25: "#FAFBFF",
-          50: "#F5F3FF",
-          100: "#EDE9FE",
-          200: "#DDD6FE",
-          300: "#C4B5FD",
-          400: "#A78BFA",
-          500: "#8B5CF6",
-          600: "#7C3AED",
-          700: "#6D28D9",
-          800: "#5B21B6",
-          900: "#4C1D95"
+          25: "#F5F3FF",
+          50: "#F0F0FE",
+          100: "#E0E0FE",
+          200: "#C7C7FD",
+          300: "#A8A8FC",
+          400: "#8888FB",
+          500: "#6366F1",
+          600: "#4F46E5",
+          700: "#4338CA",
+          800: "#3730A3",
+          900: "#312E81"
         },
         accent: {
           blue: "#4F46E5",
-          purple: "#A78BFA",
-          indigo: "#6366F1"
+          indigo: "#6366F1",
+          light: "#F0F0FE"
         }
       },
 
       backgroundColor: {
         lightBg: "#F8FAFF",
         lightCard: "#FFFFFF",
-        lightHover: "#F1F5F9"
+        lightHover: "#F0F0FE"
       },
 
       textColor: {
@@ -37,10 +37,10 @@ export default {
       },
 
       boxShadow: {
-        "premium-sm": "0 1px 2px rgba(0,0,0,0.05)",
-        "premium-md": "0 4px 6px rgba(0,0,0,0.08)",
-        "premium-lg": "0 10px 20px rgba(15,23,42,0.06)",
-        "premium-xl": "0 20px 40px rgba(15,23,42,0.08)"
+        "premium-sm": "0 1px 3px rgba(79,70,229,0.08)",
+        "premium-md": "0 4px 12px rgba(79,70,229,0.1)",
+        "premium-lg": "0 12px 24px rgba(79,70,229,0.12)",
+        "premium-xl": "0 20px 40px rgba(79,70,229,0.15)"
       },
 
       animation: {
