@@ -1,44 +1,167 @@
-# Dino Ventures Video Player
+🚀 Dino Ventures – Video Player Application
+<p align="center"> <b>Mobile-First • Smooth Playback • Gesture-Based UX • Premium UI</b> </p> <p align="center"> <a href="https://dinovideo-kaif.netlify.app/" target="_blank"> 🌐 <b>Live Demo</b> </a> </p>
+✨ Overview
 
-A mobile-first React video player experience inspired by the assignment brief. It features a category-based feed, full-screen player with custom controls, related video list, and a dockable mini-player that persists across navigation.
+A mobile-first React video player experience built for the Dino Ventures Frontend Engineer assignment.
 
-## Recommended folder structure
+This project focuses on delivering a smooth, modern, YouTube-inspired UX with:
 
-```
+🎬 Seamless full-screen playback
+
+📱 Gesture-based interactions
+
+🧩 Persistent mini-player
+
+⚡ Smooth 60fps animations
+
+🎨 Premium SaaS-style UI
+
+Live Preview →
+👉 https://dinovideo-kaif.netlify.app/
+
+🎯 Key Features
+🏠 Home Feed
+
+Category-based video grouping
+
+Responsive scrollable layout
+
+Video cards with:
+
+Thumbnail
+
+Title
+
+Duration
+
+Category badge
+
+Smooth hover animations
+
+🎬 Full-Page Player
+
+Autoplay on open
+
+Custom controls:
+
+▶ Play / Pause
+
+⏩ Skip +10s
+
+⏪ Skip -10s
+
+Seekable progress bar
+
+Time display
+
+Smooth transition from feed → player
+
+Fully responsive (mobile & desktop)
+
+🔄 In-Player Related List
+
+Swipe / scroll to reveal
+
+Category-based filtering
+
+Instant playback switching
+
+No blank reloads
+
+Smooth animated list updates
+
+📱 Drag-to-Minimize
+
+Gesture-based drag down
+
+Docking mini-player
+
+Persistent across navigation
+
+Tap to restore full-screen
+
+Close control available
+
+⭐ Bonus
+
+Auto-play next (2s countdown + cancel)
+
+Micro-interactions
+
+Smooth cubic-bezier transitions
+
+Optimized rendering behavior
+
+🧱 Architecture
 src/
-  components/       # Reusable UI building blocks
-  context/          # Shared state (player)
-  data/             # Static dataset mappings
-  pages/            # Route-level pages
-  styles/           # Global styles + Tailwind entry
-```
+  components/       → Reusable UI components
+  context/          → Global player state
+  data/             → Dataset mapping
+  pages/            → Route-level screens
+  styles/           → Tailwind entry + globals
 
-## Architecture decisions
+Tech Stack
 
-- **React + TypeScript + Vite** for a modern, type-safe development experience and fast builds.
-- **React Router** for the four main pages (Home, Categories, Library, Player).
-- **Context API** for app-wide player state (active video, mini-player state) without introducing heavyweight state management.
-- **Component-driven UI** keeps video cards, sections, and controls reusable across pages.
-- **Tailwind CSS** for consistent, scalable styling and quick iteration.
+⚛ React
 
-## Features mapped to the requirements
+🟦 TypeScript
 
-- **Home page feed** with category grouping and cards (thumbnail, title, duration, category).
-- **Full-page video player** with autoplay, custom controls, skip +/- 10 seconds, and seekable progress bar.
-- **In-player related list** filtered by category, switching playback instantly.
-- **Drag-to-minimize** gesture in the player that docks into a mini-player, persisting across navigation.
-- **Auto-play next** with a 2-second countdown and cancel option.
+⚡ Vite
 
-## Setup
+🎨 Tailwind CSS
 
-```bash
+🧭 React Router
+
+🌐 Context API
+
+🧠 Design Philosophy
+
+The goal was not just functionality, but:
+
+A fluid, intuitive, production-ready video experience that feels modern and intentional.
+
+Focus Areas:
+
+Mobile-first layout
+
+Consistent spacing system
+
+Premium white UI design
+
+GPU-accelerated animations
+
+Clean component architecture
+
+⚡ Performance Considerations
+
+Avoided unnecessary re-renders
+
+Optimized animation timing (200–300ms)
+
+Used transform + opacity for smooth motion
+
+Persistent mini-player state management
+
+Clean separation of concerns
+
+🛠 Setup
 npm install
 npm run dev
-```
 
-## Notes
+🌍 Live Demo
 
-- The dataset is stored in `src/data/videos.ts`, based on the provided sample entries and categories.
-- Player playback uses MP4 sources (required for custom controls) while retaining the original YouTube embed URLs as source links.
-- The mini-player continues playback in a lightweight preview while browsing other pages.
-"# dino-kaif" 
+👉 https://dinovideo-kaif.netlify.app/
+
+📌 Final Notes
+
+This implementation fulfills the assignment requirements while focusing on:
+
+Smooth UX
+
+Modern design standards
+
+Maintainable architecture
+
+Real-world scalability mindset
+
+💡 Built with attention to detail and production-level thinking.
