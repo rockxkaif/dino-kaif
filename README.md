@@ -1,9 +1,143 @@
-Good 😎
-Now I’ll give you Top 1% Candidate Level README.
+# Dino Ventures Video Player
 
-This is the kind of README that makes recruiters pause.
+A mobile-first React video player built for the Dino Ventures Frontend Engineer assignment.
+Focused on smooth playback, gesture-based interactions, and a persistent mini-player experience inspired by modern video platforms.
 
-Clean. Premium. Structured. Confident. No cringe.
+🔗 **Live Demo**
+[https://dinovideo-kaif.netlify.app/](https://dinovideo-kaif.netlify.app/)
+
+---
+
+## Overview
+
+This project delivers a clean, modern video experience with:
+
+* Category-based video feed
+* Full-screen custom player
+* Related video switching
+* Drag-to-minimize mini-player
+* Smooth 60fps animations
+
+The goal was to replicate real-world product-level UX rather than just basic playback.
+
+---
+
+## Folder Structure
+
+```
+src/
+  components/       # Reusable UI components
+  context/          # Global player state
+  data/             # Dataset mapping
+  pages/            # Route-level screens
+  styles/           # Tailwind + global styles
+```
+
+---
+
+## Architecture Decisions
+
+### React + TypeScript + Vite
+
+Modern stack with fast builds and strong type safety.
+
+### React Router
+
+Handles navigation between:
+
+* Home
+* Categories
+* Library
+* Player
+
+### Context API
+
+Manages:
+
+* Active video
+* Playback state
+* Mini-player state
+
+No external state libraries used.
+
+### Tailwind CSS
+
+Utility-based styling for consistency and scalable design.
+
+---
+
+## Features
+
+### 1. Home Feed
+
+* Category-grouped sections
+* Responsive video cards
+* Smooth navigation into player view
+
+### 2. Full-Page Player
+
+* Autoplay on open
+* Custom controls
+* Skip ±10 seconds
+* Seekable progress bar
+* Time display
+
+### 3. In-Player Related Videos
+
+* Filtered by category
+* Instant playback switching
+* Smooth animated reveal
+
+### 4. Drag-to-Minimize
+
+* Downward gesture to dock
+* Persistent mini-player
+* Tap to restore full screen
+* Close control
+
+### 5. Auto-Play Next
+
+* 2-second countdown
+* Cancel option
+* Category-aware sequencing
+
+---
+
+## Performance
+
+* Transform-based animations for smooth transitions
+* Avoided unnecessary re-renders
+* Persistent playback state during minimize/restore
+* Mobile-first responsive design
+
+---
+
+## Setup
+
+```bash
+npm install
+npm run dev
+```
+
+---
+
+## Notes
+
+* Dataset stored in `src/data/videos.ts`
+* MP4 playback used for custom controls
+* YouTube URLs preserved as reference links
+* Designed with production-level UX in mind
+
+---
+
+Now it will render properly on GitHub:
+
+Big title
+Clean section hierarchy
+Professional spacing
+No cringe emojis
+
+If you want it even more “top-tier GitHub profile” style, I can level it up further.
 
 Copy everything below 👇
 
